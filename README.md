@@ -7,3 +7,11 @@ The aim of the project is to implement the memory to memory data transfer by und
 <p align="center">
   <img src="https://github.com/chaitanyakasaraneni/memorytomemorytransfer/blob/master/mem2mem.PNG">
 </p>
+
+### Timing Diagram of Memory to Memory Transfer
+<p align="center">
+  <img src="https://github.com/chaitanyakasaraneni/memorytomemorytransfer/blob/master/timing.PNG">
+</p>
+
+## Reference
+- Ahmet Bindal, Fundamentals of Computer Architecture and Design, 2nd Edition, Feb 2019. Pages 89-93
