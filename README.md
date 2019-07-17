@@ -28,7 +28,7 @@ Memory transfer block has different modules which are implemented using Verilog 
 <p align="center">
   <img src="https://github.com/chaitanyakasaraneni/memorytomemorytransfer/blob/master/mem2mem.PNG">
 </p>
-<a name="timing"></a>
+<a name="time"></a>
 ### Timing Diagram of Memory to Memory Transfer
 <p align="center">
   <img src="https://github.com/chaitanyakasaraneni/memorytomemorytransfer/blob/master/timing.PNG">
