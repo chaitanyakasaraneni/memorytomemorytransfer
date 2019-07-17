@@ -23,11 +23,13 @@ In clock cycle 12, the value of A1 is read by DOut2[7:0] and value of A2 is read
 <a name="impl"></a>
 ### Implementation
 Memory transfer block has different modules which are implemented using Verilog programming language. Different modules involved are CounterA, CounterB, MemoryA, MemoryB, D flip-flop, Comparator, Adder, Subtractor, Multiplexer and the Controller decoder. Controller decoder takes reset and clock as input and generates WEA, IncA, WEB, IncB signals as outputs. Controller is implemented by a counter decoder type design. The signals controller generates help in controlling the data flow of the entire block by enabling read/write to the memories and by incrementing the addresses respectively. Counter A takes signal IncA as input and generates address for the Memory A which is 8*8 SRAM. Similarly, Counter B takes signal IncB and generates address for Memory B which is 4*8 SRAM. D flip-flop is used to latch the output of DOut1 for one clock cycle so that the next data in Memory A can come to DOut1 in the meanwhile the previous data goes to the DOut2 (output of D flip-flop). Comparator does the comparing of values at DOut1 and DOut2 and generates output signal to decide whether to carry out addition or subtraction on the data. ADDOut[7:0] and SUBOut[7:0] results then get selected in 2*1 multiplexer depending on the comparator signal (0 or 1). The output from the multiplexer which is either ADDOut or SUBOut is the DataInB for the Memory B. This is how the memory transfer happens from Memory A to Memory B. The individual modules are then instantiated in the top module (memory_transfer) which actually integrates each and every module and their respective signals and enables the memory transfer.
+
 <a name="block"></a>
 ### Block Diagram of Memory to Memory Transfer
 <p align="center">
   <img src="https://github.com/chaitanyakasaraneni/memorytomemorytransfer/blob/master/mem2mem.PNG">
 </p>
+
 <a name="time"></a>
 ### Timing Diagram for Memory to Memory Transfer
 <p align="center">
